@@ -1,4 +1,4 @@
-package be.ipam.sgbd2627.anOldExample.mappers;
+package be.ipam.sgbd2627.anOldExample.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;

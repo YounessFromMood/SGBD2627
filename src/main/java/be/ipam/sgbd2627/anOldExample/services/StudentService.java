@@ -2,7 +2,7 @@ package be.ipam.sgbd2627.anOldExample.services;
 
 import be.ipam.sgbd2627.anOldExample.DTO.StudentExampleDto;
 import be.ipam.sgbd2627.anOldExample.mappers.StudentMapper;
-import be.ipam.sgbd2627.anOldExample.mappers.Student;
+import be.ipam.sgbd2627.anOldExample.models.Student;
 import be.ipam.sgbd2627.anOldExample.repositories.StudentRepository;
 import org.springframework.stereotype.Service;
 

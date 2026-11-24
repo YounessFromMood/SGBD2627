@@ -1,6 +1,6 @@
 package be.ipam.sgbd2627.anOldExample.DTO;
 
-import be.ipam.sgbd2627.anOldExample.mappers.Student;
+import be.ipam.sgbd2627.anOldExample.models.Student;
 import lombok.Value;
 
 import java.io.Serializable;

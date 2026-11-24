@@ -2,13 +2,13 @@ package be.ipam.sgbd2627.models;
 
 import be.ipam.sgbd2627.models.enums.EtatChronique;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Positive;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -18,7 +18,7 @@ import java.util.UUID;
 @NoArgsConstructor //Imposé par JPA apparemment
 //TODO check le besoin de @NoArgsConstructor
 
-public class ChroniqueEntity {
+public class Chronique {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -43,11 +43,11 @@ public class ChroniqueEntity {
     @ManyToOne
     private Redacteur nomRedacteur;
 
-    @ManyToOne
+    @OneToOne
     private Album album;
 
-    @OneToMany
-    private ChroniqueMorceau chroniqueMorceau;
+    @OneToMany(mappedBy = "chronique")
+    private List<ChroniqueMorceau> ChroniqueMorceau = new ArrayList<>();
 
     /* -- Inutile car j'ai pas besoin de les stocker dans la chronique. La table commentaire sais déjà quelle chronique
      * elle commente --
